@@ -45,11 +45,11 @@ char ShopMenu()
 		{
 			cout << "You chose " << playerChoice << " - this is not a valid choice in our options. " << endl;
 			double lostIQ = LosesErrorIQ();
-			cout << "As a result you lost " << lostIQ << " IQPoints" << endl;
+			cout << "As a result you lost " << lostIQ << " IQ Points" << endl;
 			if (!CheckPlayerIQ())
 				return 'X';
 			else
-				cout << "Now you still have " << GetPlayerIQ() << " points. " << endl;
+				cout << "Now you still have " << GetPlayerIQ() << " IQ Points. " << endl;
 		}
 		if (playerChoice == 'A' || playerChoice == 'a') 
 		{

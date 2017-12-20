@@ -28,6 +28,7 @@ char ParlourMenu()
 		}
 		cout << "S. To go back to the shop and replenish your quotes." << endl;
 		cout << "X. To exit the game." << endl;
+		cout << "> ";
 		playerChoice = _getch();
 		system("CLS");
 		if (playerChoice == 'X' || playerChoice == 'x') {
@@ -42,6 +43,16 @@ char ParlourMenu()
 			double quoteResult = PrintQuote(quoteIndex, playerRepertoire);
 
 			AddIQ(quoteResult);
+		}
+		else 
+		{
+			cout << "You chose " << playerChoice << " - this is not a valid choice in our options. " << endl;
+			double lostIQ = LosesErrorIQ();
+			cout << "As a result you lost " << lostIQ << " IQ Points" << endl;
+			if (!CheckPlayerIQ())
+				return 'X';
+			else
+				cout << "Now you still have " << GetPlayerIQ() << " points. " << endl;
 		}
 	}
 	return playerChoice;
