@@ -10,7 +10,7 @@
 
 using namespace std;
 
-string author[] = {
+string author[NUM_QUOTES] = {
 	"Anne Frank",
 	"Heraclitus",
 	"H. Jackson Brown Jr.",
@@ -21,7 +21,7 @@ string author[] = {
 	"Aristotle",
 	"George Bernard Shaw"
 };
-string quote[] = {
+string quote[NUM_QUOTES] = {
 	"Whoever is happy will make others happy too.",
 	"There is nothing permanent except change.",
 	"The best preparation for tomorrow is doing your best today.",
@@ -32,7 +32,7 @@ string quote[] = {
 	"It is during our darkest moments that we must focus to see the light.",
 	"Life isn't about finding yourself. Life is about creating yourself."
 };
-string quotePraise[] = {
+string quotePraise[NUM_QUOTES] = {
 	"Heartwarming!",
 	"Well said.",
 	"Let's us not waste any time!",
@@ -43,13 +43,13 @@ string quotePraise[] = {
 	"Jolly good!",
 	"Bravo!"
 };
-double requiredIQ[] = {
+double requiredIQ[NUM_QUOTES] = {
 	80, 90, 110, 120, 130, 150, 170, 180, 200
 };
-double rewardIQ[] = {
+double rewardIQ[NUM_QUOTES] = {
 	5.5, 7.5, 9.3, 9.5, 15, 20, 31.2, 33 , 90
 };
-int reuse[] = {
+int reuse[NUM_QUOTES] = {
 	1, 3, 2, 5, 2, 2, 1, 3, 1 
 };
 
@@ -65,7 +65,7 @@ void PrintQuoteAuthor(int selectedAuthorIndex)
 char ShopQuotes() 
 {
 	bool validEntry = false;
-	char playerChoice = '/0';
+	char playerChoice = 'N';
 	do {
 		double currentPlayerIQ = GetPlayerIQ();
 		int* playerRepertoire = GetPlayerRepertoire();
